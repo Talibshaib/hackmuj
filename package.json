@@ -9,9 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@api/climacell-docs": "file:.api/apis/climacell-docs",
+    "cobe": "^0.6.3",
+    "fs": "^0.0.1-security",
+    "next": "14.2.8",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.8"
+    "react-spring": "^9.7.4",
+    "zustand": "^4.5.5"
   },
   "devDependencies": {
     "postcss": "^8",
