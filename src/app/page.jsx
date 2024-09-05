@@ -2,9 +2,9 @@
 
 import React, { useEffect } from "react";
 import store from "../store/store";
-import Image from "next/image";
-import Group from "../assets/Group.png"; // Ensure this path is correct
 import ImageSlider from "@/components/ImageSlider";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 const AdminPanel = () => {
   const { filters, setFilter, sosMessages, addSosMessage } = store();
@@ -23,26 +23,23 @@ const AdminPanel = () => {
       <ImageSlider/>
 
       <div className="flex flex-col md:flex-row gap-4 mb-5">
-        <button
-          className="bg-yellow-300 py-2 px-4 rounded-md shadow-md font-semibold"
+        <Button
           onClick={() => alert("Evacuation process initiated!")}
         >
           Evacuation
-        </button>
-        <button
-          className="bg-yellow-300 py-2 px-4 rounded-md shadow-md font-semibold"
+        </Button>
+        <Button
           onClick={handleSOSClick}
         >
           SOS
-        </button>
+        </Button>
       </div>
 
       {/* Filters */}
       <div className="flex flex-col md:flex-row items-center gap-4 mb-5">
-        <input
+        <Input
           type="text"
           placeholder="Filter"
-          className="border p-2 rounded-md flex-grow bg-white text-gray-700"
           onChange={(e) => setFilter("filter", e.target.value)}
         />
         <select
