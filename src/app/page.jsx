@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import store from "../store/store";
 import Image from "next/image";
 import Group from "../assets/Group.png"; // Ensure this path is correct
+import ImageSlider from "@/components/ImageSlider";
 
 const AdminPanel = () => {
   const { filters, setFilter, sosMessages, addSosMessage } = store();
@@ -18,34 +19,8 @@ const AdminPanel = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-5 pr-20 pl-20">
-      <header className="flex flex-grow mb-5 overflow-x-auto space-x-4">
-        <div className="flex-shrink-0 bg-gray-300 h-48 w-64 rounded-md flex items-center justify-center relative">
-          <Image
-            src={Group}
-            alt="Flood"
-            layout="fill"
-            className="rounded-md opacity-80 border-2 border-gray-300"
-          />
-        </div>
-        <div className="flex-shrink-0 bg-gray-300 h-48 w-64 rounded-md flex items-center justify-center relative">
-          <Image
-            src={Group}
-            alt="Flood"
-            layout="fill"
-            className="rounded-md opacity-80 border-2 border-gray-300"
-          />
-        </div>
-        <div className="flex-shrink-0 bg-gray-300 h-48 w-64 rounded-md flex items-center justify-center relative">
-          <Image
-            src={Group}
-            alt="Flood"
-            layout="fill"
-            className="rounded-md opacity-80 border-2 border-gray-300"
-          />
-        </div>
-        {/* Add more images as needed */}
-      </header>
+    <div className="min-h-screen bg-gray-100 p-5 px-20">
+      <ImageSlider/>
 
       <div className="flex flex-col md:flex-row gap-4 mb-5">
         <button
